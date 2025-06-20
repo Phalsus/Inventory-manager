@@ -6,6 +6,10 @@ with open("data.json", "r") as file:
 class utility:
     def addItem():
         name = input("Enter item name: ").lower()
+        for i in data["inventory"]:
+            if i["name"] == name:
+                print("item already exist")
+                return
         description = input("Enter item description").lower()
         quantity = input("Enter the quantity of the item(s)")
         newItem = {
@@ -19,7 +23,7 @@ class utility:
         return
 
     def updateQuantity():
-        name = input("what item do you want to change? : ").lower
+        name = input("what item do you want to change? : ").lower()
         valid = False
         for i in data["inventory"]:
             if i["name"] == name :
@@ -37,7 +41,7 @@ class utility:
         return
 
     def search():
-        name = input("what item are you looking for? : ").lower
+        name = input("what item are you looking for? : ").lower()
         valid = False
         for i in data["inventory"]:
             valid = True
@@ -47,11 +51,12 @@ class utility:
         return
 
     def delete():
-        name = input("what item do you want to delete? ").lower
+        name = input("what item do you want to delete? ").lower()
         valid = False
         for i in data["inventory"]:
             valid = True
             if i["name"] == name :
+                print(data["inventory"])
                 data["inventory"].remove(i)
         if not valid:print("that item does not exist")
         with open("data.json", "w") as file:

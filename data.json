@@ -1,1 +1,9 @@
-{"inventory": [{"name": "Rice", "description": "5kg bag of rice", "quantity": 10}, {"name": "test", "description": "test", "quantity": "test"}]}
+{
+  "inventory": [
+    { "name": "rice", "description": "5kg bag of rice", "quantity": "2000" },
+    { "name": "test", "description": "test", "quantity": "test" },
+    { "name": "pencil", "description": "for drawing", "quantity": "600" },
+    { "name": "pen", "description": "drwing 2", "quantity": "50" },
+    { "name": "pen", "description": "writing", "quantity": "40" }
+  ]
+}
